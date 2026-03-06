@@ -11,7 +11,8 @@ const Blog = () => {
       date: "01 Марта 2024",
       author: "Мастер Манас",
       image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80",
-      category: "Сантехника"
+      category: "Сантехника",
+      link: "/blog/article"
     },
     {
       id: 2,
@@ -20,7 +21,8 @@ const Blog = () => {
       date: "25 Февраля 2024",
       author: "Мастер Манас",
       image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80",
-      category: "Электрика"
+      category: "Электрика",
+      link: "/blog/electrical-short"
     },
     {
       id: 3,
@@ -29,7 +31,8 @@ const Blog = () => {
       date: "15 Февраля 2024",
       author: "Мастер Манас",
       image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80",
-      category: "Полезные советы"
+      category: "Полезные советы",
+      link: "/blog/clog-removal"
     },
     {
       id: 4,
@@ -38,7 +41,8 @@ const Blog = () => {
       date: "05 Февраля 2024",
       author: "Мастер Манас",
       image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b6?auto=format&fit=crop&q=80",
-      category: "Электрика"
+      category: "Электрика",
+      link: "/blog/wiring-replacement"
     }
   ];
 
@@ -86,9 +90,8 @@ const Blog = () => {
                   <p className="text-gray-600 mb-6 flex-1 line-clamp-3">
                     {post.excerpt}
                   </p>
-                  
                   <Link 
-                    to={`/blog/article`} 
+                    to={post.link} 
                     className="inline-flex items-center text-[#0095DA] font-bold hover:text-[#0084c0] transition-colors group/link w-fit"
                   >
                     Читать статью

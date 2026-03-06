@@ -6,6 +6,9 @@ import Services from "./pages/Services";
 import Prices from "./pages/Prices";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import BlogPostElectrical from "./pages/BlogPostElectrical";
+import BlogPostClog from "./pages/BlogPostClog";
+import BlogPostWiring from "./pages/BlogPostWiring";
 import Portfolio from "./pages/Portfolio";
 import Reviews from "./pages/Reviews";
 import About from "./pages/About";
@@ -28,6 +31,9 @@ function App() {
           <Route path="/prices" element={<Prices />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/article" element={<BlogPost />} />
+          <Route path="/blog/electrical-short" element={<BlogPostElectrical />} />
+          <Route path="/blog/clog-removal" element={<BlogPostClog />} />
+          <Route path="/blog/wiring-replacement" element={<BlogPostWiring />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/about" element={<About />} />

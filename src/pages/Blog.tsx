@@ -40,7 +40,7 @@ const Blog = () => {
       excerpt: "Алюминиевая проводка исчерпала свой ресурс. Как понять, что пора менять кабели в квартире и почему это вопрос вашей безопасности.",
       date: "05 Февраля 2024",
       author: "Мастер Манас",
-      image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b6?auto=format&fit=crop&q=80",
+      image: "/images/services/uslugi-elektrika.png",
       category: "Электрика",
       link: "/blog/wiring-replacement"
     }

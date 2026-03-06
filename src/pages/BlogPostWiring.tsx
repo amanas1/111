@@ -22,7 +22,7 @@ const BlogPostWiring = () => {
             {/* Header / Hero of the post */}
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b6?auto=format&fit=crop&q=80" 
+                src="/images/services/uslugi-elektrika.png" 
                 alt="Профессиональный монтаж новой электропроводки" 
                 className="w-full h-full object-cover"
               />

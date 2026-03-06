@@ -56,24 +56,26 @@ const Index = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0095DA] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-500 text-sm mb-4 line-clamp-2">{service.description}</p>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-2xl font-extrabold text-[#0095DA]">
-                      {service.price}
-                    </span>
-                    <div className="flex items-center gap-2 text-xs text-gray-400">
-                      <Clock size={14} />
-                      {service.time}
+                  <p className="text-gray-500 text-sm mb-6 line-clamp-3">{service.description}</p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div>
+                      <span className="block text-2xl font-extrabold text-[#0095DA]">
+                        {service.price}
+                      </span>
+                      <div className="flex items-center gap-1 text-xs text-gray-500 mt-1">
+                        <Clock size={12} />
+                        {service.time}
+                      </div>
                     </div>
+                    <span className="bg-[#0095DA] group-hover:bg-[#0084c0] text-white px-5 py-2 rounded-lg font-bold text-sm transition-colors shadow-md">
+                      Заказать
+                    </span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-xs text-green-600">
-                      <Shield size={14} />
-                      Гарантия 1 год
-                    </div>
-                    <span className="text-sm font-semibold text-[#0095DA] flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Подробнее <ArrowRight size={14} />
-                    </span>
+
+                  <div className="flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg w-fit">
+                    <Shield size={14} />
+                    Гарантия 1 год
                   </div>
                 </div>
               </Link>

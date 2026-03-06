@@ -1,9 +1,25 @@
 import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import seoData from "../data/seo-data.json";
 import { ArrowRight, Wrench } from "lucide-react";
 
 const Services = () => {
+  const [activeCategory, setActiveCategory] = useState("Все услуги");
+
+  const categories = [
+    { id: "all", name: "Все услуги" },
+    { id: "plumbing", name: "Сантехника" },
+    { id: "electrical", name: "Электрика" }
+  ];
+
+  const filteredServices = activeCategory === "Все услуги" 
+    ? seoData.services 
+    : seoData.services.filter(s => {
+        if (activeCategory === "Сантехника" && s.category === "plumbing") return true;
+        if (activeCategory === "Электрика" && s.category === "electrical") return true;
+        return false;
+      });
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
@@ -35,8 +51,26 @@ const Services = () => {
             </p>
           </div>
 
+          <div className="mb-8 overflow-x-auto pb-4 scrollbar-hide">
+            <div className="flex gap-2 min-w-max justify-center md:justify-start lg:justify-center border-b border-gray-100 pb-4">
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.name)}
+                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
+                    activeCategory === cat.name
+                      ? "bg-[#0095DA] text-white shadow-md shadow-[#0095DA]/20"
+                      : "bg-gray-50 text-gray-600 hover:bg-gray-100"
+                  }`}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {seoData.services.map((service) => (
+            {filteredServices.map((service, index) => (
               <div key={service.id} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all group flex flex-col">
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-[#0095DA]/10 group-hover:bg-[#0095DA]/0 transition-colors z-10"></div>
@@ -45,6 +79,11 @@ const Services = () => {
                     alt={service.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
+                  {index < 3 && (
+                    <div className="absolute top-4 left-4 bg-[#0095DA] text-white text-xs font-bold px-3 py-1 rounded-full z-20 shadow-lg shadow-[#0095DA]/30">
+                      Популярно
+                    </div>
+                  )}
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-[#0095DA] z-20 shadow-sm">
                     {service.price}
                   </div>
@@ -55,14 +94,29 @@ const Services = () => {
                     {service.description}
                   </p>
                   
-                  {/* Default link to the Almalinsky district since we need a district for the route, or generic. For now, link to Almalinsky as default */}
-                  <Link 
-                    to={`/uslugi/${service.id}/almalinskij`} 
-                    className="inline-flex items-center text-[#0095DA] font-bold hover:text-[#0084c0] transition-colors mt-auto group/link"
-                  >
-                    Подробнее
-                    <ArrowRight size={18} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                  <div className="mt-auto">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <span className="block text-2xl font-extrabold text-[#0095DA]">
+                          {service.price}
+                        </span>
+                        <div className="flex items-center gap-1 text-xs text-gray-500 mt-1">
+                          <span className="flex items-center gap-1">⏱️ {service.time}</span>
+                        </div>
+                      </div>
+                      <Link 
+                        to={`/uslugi/${service.id}/almalinskij`} 
+                        className="bg-[#0095DA] hover:bg-[#0084c0] text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-colors shadow-md text-center"
+                      >
+                        Заказать
+                      </Link>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg w-fit">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 22-8-4.5v-9L12 4l8 4.5v9Z"/><path d="m9 12 2 2 4-4"/></svg>
+                      Гарантия 1 год
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

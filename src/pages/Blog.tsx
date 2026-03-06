@@ -88,7 +88,7 @@ const Blog = () => {
                   </p>
                   
                   <Link 
-                    to={`/blog`} 
+                    to={`/blog/article`} 
                     className="inline-flex items-center text-[#0095DA] font-bold hover:text-[#0084c0] transition-colors group/link w-fit"
                   >
                     Читать статью

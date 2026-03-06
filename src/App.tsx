@@ -5,6 +5,7 @@ import ServiceDistrictPage from "./pages/ServiceDistrictPage";
 import Services from "./pages/Services";
 import Prices from "./pages/Prices";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Portfolio from "./pages/Portfolio";
 import Reviews from "./pages/Reviews";
 import About from "./pages/About";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/article" element={<BlogPost />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/about" element={<About />} />

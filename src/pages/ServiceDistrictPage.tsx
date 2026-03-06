@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import seoData from "../data/seo-data.json";
 import SEO from "../components/SEO";
-import { Phone, Clock, Shield, MapPin, CheckCircle } from "lucide-react";
+import { Phone, Clock, Shield, MapPin, CheckCircle, ArrowRight } from "lucide-react";
 
 const ServiceDistrictPage = () => {
   const { serviceId, districtId } = useParams();
@@ -19,17 +19,26 @@ const ServiceDistrictPage = () => {
   }
 
   const title = `${service.title} в ${district.nameGenitive} Алматы | Мастер Манас`;
-  const description = `${service.title} в ${district.nameGenitive} Алматы. Профессионально, быстро, с гарантией. Выезд мастера 24/7. Звоните прямо сейчас!`;
+  const description = `${service.title} в ${district.nameGenitive} Алматы — ${service.price}. Выезд мастера 24/7 за 30 минут. Гарантия 12 месяцев. ☎ +7 (705) 553-53-32`;
+
+  // Get other services for cross-linking
+  const otherServices = seoData.services.filter((s) => s.id !== serviceId).slice(0, 4);
 
   return (
     <div className="min-h-screen bg-white">
       <SEO title={title} description={description} />
 
-      {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-[#0095DA] to-[#0074b3] text-white py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <nav className="mb-6 text-sm opacity-80 flex items-center gap-2">
-            <Link to="/" className="hover:opacity-100">Главная</Link>
+      {/* Hero Banner with Image */}
+      <div className="relative min-h-[350px] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${service.image}')` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0095DA]/95 to-[#0074b3]/85" />
+        </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-16">
+          <nav className="mb-6 text-sm text-white/80 flex items-center gap-2 flex-wrap">
+            <Link to="/" className="hover:text-white transition-colors">Главная</Link>
             <span>/</span>
             <span>Услуги</span>
             <span>/</span>
@@ -38,12 +47,23 @@ const ServiceDistrictPage = () => {
             <span>{district.name}</span>
           </nav>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-            🔧 {service.title} в {district.nameGenitive} Алматы
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+            {service.title} в {district.nameGenitive} Алматы
           </h1>
-          <p className="text-xl opacity-90 max-w-2xl">
-            Профессиональные услуги по категории "{service.title.toLowerCase()}" с использованием современного оборудования и качественных материалов.
+          <p className="text-xl text-white/90 max-w-2xl mb-6">
+            {service.description}
           </p>
+          <div className="flex flex-wrap gap-4">
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
+              <Clock size={16} /> {service.time}
+            </div>
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
+              <Shield size={16} /> Гарантия 12 мес.
+            </div>
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
+              <MapPin size={16} /> {district.name}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -51,19 +71,17 @@ const ServiceDistrictPage = () => {
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column — Description */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Описание услуги</h2>
+          <div className="lg:col-span-2 space-y-8">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+              <h2 className="text-2xl font-bold mb-4">О услуге</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                {service.description} Мы осуществляем выезд во все точки {district.nameGenitive} в течение 30-60 минут. 
-                Все работы выполняются с гарантией качества. Используем профессиональный инструмент и оригинальные запчасти.
-                Средняя продолжительность ремонта — 40-60 минут. Работаем без выходных.
+                {service.longDescription || service.description}
               </p>
 
-              <h3 className="text-xl font-bold mb-3">Наши преимущества в {district.nameGenitive}:</h3>
+              <h3 className="text-xl font-bold mb-4">Наши преимущества в {district.nameGenitive}:</h3>
               <ul className="space-y-3">
                 {[
-                  "Быстрый выезд 24/7 — приедем за 30 минут",
+                  `Быстрый выезд 24/7 в ${district.name} — приедем за 30 минут`,
                   "Гарантия на работы до 12 месяцев",
                   "Честные цены без накруток и скрытых платежей",
                   "Опытные мастера со стажем более 15 лет",
@@ -78,9 +96,44 @@ const ServiceDistrictPage = () => {
               </ul>
             </div>
 
+            {/* Service Image */}
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+              <img
+                src={service.image}
+                alt={`${service.title} в ${district.nameGenitive}`}
+                className="w-full h-64 object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Other Services */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+              <h2 className="text-2xl font-bold mb-6">Другие услуги в {district.nameGenitive}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {otherServices.map((s) => (
+                  <Link
+                    key={s.id}
+                    to={`/uslugi/${s.id}/${districtId}`}
+                    className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-[#0095DA] hover:text-white transition-all group"
+                  >
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      className="w-16 h-16 rounded-lg object-cover shrink-0"
+                      loading="lazy"
+                    />
+                    <div>
+                      <p className="font-bold text-sm">{s.title}</p>
+                      <p className="text-xs text-gray-400 group-hover:text-white/70">{s.price}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* Other Districts */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold mb-6">Другие районы обслуживания</h2>
+              <h2 className="text-2xl font-bold mb-6">{service.title} в других районах</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {seoData.districts
                   .filter((d) => d.id !== districtId)
@@ -102,35 +155,44 @@ const ServiceDistrictPage = () => {
           <div className="space-y-6">
             {/* Price Card */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 sticky top-24">
-              <h3 className="text-lg font-bold mb-4 text-center">Стоимость услуги</h3>
+              <h3 className="text-lg font-bold mb-2 text-center">Стоимость услуги</h3>
               <div className="text-center mb-6">
-                <span className="text-4xl font-extrabold text-[#0095DA]">от 3 500 ₸</span>
+                <span className="text-4xl font-extrabold text-[#0095DA]">{service.price}</span>
               </div>
 
-              <div className="space-y-3 mb-6">
+              <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-3 text-sm text-gray-600">
-                  <Clock size={18} className="text-[#0095DA]" />
-                  <span>40-60 мин</span>
+                  <Clock size={18} className="text-[#0095DA] shrink-0" />
+                  <span>{service.time}</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-gray-600">
-                  <Shield size={18} className="text-[#4ADE80]" />
-                  <span>Гарантия 1 год</span>
+                  <Shield size={18} className="text-[#4ADE80] shrink-0" />
+                  <span>Гарантия до 12 месяцев</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-gray-600">
-                  <MapPin size={18} className="text-amber-500" />
+                  <MapPin size={18} className="text-amber-500 shrink-0" />
                   <span>Выезд по {district.nameGenitive}</span>
                 </div>
               </div>
 
               <a
                 href="tel:+77055535332"
-                className="w-full flex items-center justify-center gap-2 bg-[#4ADE80] hover:bg-[#3dca72] text-gray-900 py-4 rounded-xl font-bold text-lg transition-colors"
+                className="w-full flex items-center justify-center gap-2 bg-[#4ADE80] hover:bg-[#3dca72] text-gray-900 py-4 rounded-xl font-bold text-lg transition-colors shadow-md"
               >
                 <Phone size={20} />
                 Заказать
               </a>
               
-              <p className="text-xs text-gray-400 text-center mt-3">Бесплатная консультация по телефону</p>
+              <a
+                href="https://wa.me/77055535332"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 bg-[#0095DA] hover:bg-[#0084c0] text-white py-3 rounded-xl font-bold text-sm transition-colors mt-3"
+              >
+                💬 WhatsApp
+              </a>
+
+              <p className="text-xs text-gray-400 text-center mt-3">Бесплатная консультация</p>
             </div>
           </div>
         </div>

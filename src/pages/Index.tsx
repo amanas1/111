@@ -1,280 +1,318 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import seoData from "../data/seo-data.json";
-import Hero from "../components/Hero";
 import SEO from "../components/SEO";
-import { Clock, Shield, ThumbsUp, Wrench, MapPin, Star, ArrowRight } from "lucide-react";
+import { Clock, ShieldCheck, ThumbsUp, Wrench, MapPin, Star, ArrowRight, CheckCircle2, Calendar, Phone, Award } from "lucide-react";
+import { useState } from "react";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "",
+    message: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    window.location.href = `tel:+77055535332`;
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Сантехник и Электрик в Алматы — Мастер Манас | Вызов 24/7"
-        description="Профессиональный сантехник и электрик в Алматы с выездом за 30 минут. 15 лет опыта, гарантия 12 месяцев. Вызов мастера по телефону +7 (705) 553-53-32. Работаем круглосуточно во всех районах города."
+        title="Вызов сантехника в Алматы 24/7 | Услуги сантехника и электрика — Мастер Манас"
+        description="Профессиональные услуги сантехника и электрика в Алматы. Срочный выезд за 30 минут круглосуточно 24/7. Ремонт, замена труб, монтаж оборудования с гарантией 1 год."
+        keywords="сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы, вызов сантехника алматы, сантехник на дом круглосуточно, ремонт сантехники, монтаж труб, замена смесителя"
       />
 
-      <Hero />
+      {/* Hero Section */}
+      <section className="relative min-h-[650px] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/hero/master-working-v2.png')" }}
+        >
+          <div className="absolute inset-0 bg-gray-900/60" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+              Профессиональные услуги <br /> сантехника в Алматы
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-xl leading-relaxed font-medium">
+              Профессиональные сантехнические и электрические услуги с гарантией до 12 месяцев. Выезд во все районы Алматы.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="tel:+77055535332"
+                className="bg-[#1173D4] hover:bg-[#0f67be] text-white px-8 py-4 rounded-xl font-bold text-[15px] transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2"
+              >
+                <Phone size={20} className="fill-current" />
+                Вызвать мастера
+              </a>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold px-6 py-4 rounded-xl flex items-center gap-3">
+                <span className="flex h-2.5 w-2.5 rounded-full bg-green-400 animate-pulse"></span>
+                Выезд и диагностика БЕСПЛАТНО!
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl">
+            {[
+              { value: "1000+", label: "клиентов" },
+              { value: "10 лет", label: "на рынке" },
+              { value: "24/7", label: "работаем" },
+              { value: "4.9/5", label: "рейтинг" },
+            ].map((stat) => (
+              <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-white">
+                <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
+                <div className="text-[13px] font-medium opacity-80 uppercase tracking-wider">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6" id="services">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="inline-block bg-blue-50 text-[#0095DA] text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-              НАШИ УСЛУГИ
-            </span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
-              Сантехнические и электрические услуги
-            </h2>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              Полный спектр работ для вашего дома и квартиры. Гарантия качества на все виды услуг.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Популярные услуги</h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {seoData.services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {seoData.services.slice(0, 8).map((service, index) => (
               <Link
                 key={service.id}
                 to={`/uslugi/${service.id}/medeuskij`}
-                className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
+                className="bg-white rounded-[1.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group"
               >
-                <div className="h-52 overflow-hidden relative">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  {index < 6 && (
+                <div className="h-48 overflow-hidden relative">
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  {index < 4 && (
                     <div className="absolute top-4 left-4">
-                      <span className="bg-[#0095DA] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                      <span className="bg-[#1173D4] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                         Популярно
                       </span>
                     </div>
                   )}
-                  <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#0095DA] transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm mb-6 line-clamp-3">{service.description}</p>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="block text-2xl font-extrabold text-[#0095DA]">
-                        {service.price}
-                      </span>
-                      <div className="flex items-center gap-1 text-xs text-gray-500 mt-1">
-                        <Clock size={12} />
-                        {service.time}
-                      </div>
-                    </div>
-                    <span className="bg-[#0095DA] group-hover:bg-[#0084c0] text-white px-5 py-2 rounded-lg font-bold text-sm transition-colors shadow-md">
-                      Заказать
-                    </span>
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center gap-2 text-[#1173D4] mb-3">
+                    <Wrench size={18} />
                   </div>
-
-                  <div className="flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg w-fit">
-                    <Shield size={14} />
-                    Гарантия 1 год
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 leading-snug">{service.title}</h3>
+                  <div className="mt-auto pt-4 flex items-center justify-between">
+                    <span className="text-[#1173D4] font-extrabold">от {service.price}</span>
+                    <span className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-[#1173D4] group-hover:text-white transition-colors">
+                      <ArrowRight size={16} />
+                    </span>
                   </div>
                 </div>
               </Link>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/services" className="inline-flex items-center justify-center px-8 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors">
+              Все услуги
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="inline-block bg-green-50 text-green-600 text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-              ПРЕИМУЩЕСТВА
-            </span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Почему выбирают Мастера Манаса?</h2>
-            <p className="text-lg text-gray-500 max-w-xl mx-auto">Более 1000 довольных клиентов в Алматы</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Почему выбирают нас</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Clock, title: "Быстрый выезд", desc: "Мастер приедет в любой район Алматы за 30 минут", color: "bg-blue-50 text-[#0095DA]", border: "border-blue-100" },
-              { icon: Shield, title: "Гарантия до 12 мес.", desc: "На все виды работ — сантехнических и электрических", color: "bg-green-50 text-green-600", border: "border-green-100" },
-              { icon: ThumbsUp, title: "15+ лет опыта", desc: "Тысячи успешно выполненных заказов и довольных клиентов", color: "bg-amber-50 text-amber-600", border: "border-amber-100" },
-              { icon: Wrench, title: "Профессиональный инструмент", desc: "Используем только качественные материалы и инструменты", color: "bg-purple-50 text-purple-600", border: "border-purple-100" },
-            ].map((item) => (
-              <div key={item.title} className={`bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all text-center border ${item.border}`}>
-                <div className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-5`}>
-                  <item.icon size={30} />
+              { icon: Clock, title: "Быстрый приезд", desc: "Мастер будет у вас в течение 30-45 минут после звонка." },
+              { icon: ShieldCheck, title: "Гарантия качества", desc: "Даем официальную гарантию до 12 месяцев на все работы." },
+              { icon: ThumbsUp, title: "Опытные мастера", desc: "Стаж работы наших специалистов не менее 7 лет." },
+              { icon: CheckCircle2, title: "Честные цены", desc: "Озвучиваем стоимость до начала работ, никаких скрытых доплат." },
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-50 p-8 rounded-[1.5rem] border border-slate-100 flex flex-col items-center text-center">
+                <div className="w-14 h-14 bg-white text-[#1173D4] rounded-2xl flex items-center justify-center shadow-sm mb-5">
+                  <item.icon size={26} strokeWidth={2} />
                 </div>
-                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-[14px] text-slate-500 font-medium leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <span className="inline-block bg-blue-50 text-[#0095DA] text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-              КАК ЭТО РАБОТАЕТ
-            </span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">3 простых шага</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { step: "01", title: "Позвоните нам", desc: "Опишите проблему по телефону или WhatsApp. Бесплатная консультация." },
-              { step: "02", title: "Мастер приедет", desc: "В течение 30 минут мастер будет у вас с полным набором инструментов." },
-              { step: "03", title: "Проблема решена", desc: "Работа выполнена качественно с гарантией до 12 месяцев." },
-            ].map((item) => (
-              <div key={item.step} className="text-center relative">
-                <div className="w-20 h-20 bg-[#0095DA] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-extrabold shadow-lg shadow-[#0095DA]/30">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm">{item.desc}</p>
+      {/* Professional History / About Short */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">О компании "Мастер Манас"</h2>
+              <div className="space-y-4 text-[16px] text-slate-600 font-medium leading-relaxed mb-8">
+                <p>Мы работаем на рынке Алматы более 10 лет. За это время мы сформировали команду профессионалов, которые обожают свое дело и ценят доверие клиентов.</p>
+                <p>Наша цель — качественный сервис по разумной цене, где вы получаете надежность и безопасность для своего дома.</p>
               </div>
-            ))}
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Только сертифицированные материалы",
+                  "Свой профессиональный инструмент",
+                  "Чистота и порядок после работы",
+                  "Работаем круглосуточно, без выходных"
+                ].map((li, i) => (
+                  <li key={i} className="flex items-center gap-3 text-[15px] font-bold text-slate-800">
+                    <CheckCircle2 size={20} className="text-green-500" />
+                    {li}
+                  </li>
+                ))}
+              </ul>
+              <Link to="/about" className="inline-flex items-center gap-2 text-[#1173D4] font-bold text-[15px] hover:gap-3 transition-all">
+                Подробнее о нас <ArrowRight size={18} />
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg">
+                <img src="/images/hero/plumber-portrait-hero.jpg" alt="Сантехник за работой" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-6 -left-8 bg-[#f8f9fc] px-8 py-5 rounded-[1.5rem] shadow-xl border border-white hidden md:block z-10">
+                <div className="flex items-center gap-5">
+                  <div className="w-[52px] h-[52px] bg-[#ebf4ff] text-[#1173D4] rounded-full flex items-center justify-center shrink-0">
+                    <Award size={26} strokeWidth={2.5} />
+                  </div>
+                  <div>
+                    <div className="text-[22px] font-extrabold text-slate-900 leading-none mb-1">№1</div>
+                    <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wide">В рейтинге Алматы</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Reviews */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="inline-block bg-amber-50 text-amber-600 text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-              ОТЗЫВЫ
-            </span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Что говорят наши клиенты</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Отзывы клиентов</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: "Айгуль С.", district: "Бостандыкский район", text: "Вызывала сантехника для замены смесителя. Мастер приехал через 25 минут, всё сделал аккуратно и быстро. Рекомендую!", rating: 5 },
-              { name: "Ерлан К.", district: "Медеуский район", text: "Отличный электрик! Заменил всю проводку в квартире. Работал чисто, всё объяснил. Гарантию дал на год. Буду обращаться ещё.", rating: 5 },
-              { name: "Наталья П.", district: "Ауэзовский район", text: "Срочно нужен был ремонт унитаза в выходной. Манас приехал за 30 минут, починил быстро. Цены адекватные, мастер вежливый.", rating: 5 },
+              { bg: "bg-[#1173D4]", letter: "А", name: "Айгуль С.", date: "15 янв 2025", text: "Вызывала сантехника для замены смесителя. Мастер приехал через 25 минут, всё сделал аккуратно и быстро. Рекомендую!", rating: 5 },
+              { bg: "bg-green-500", letter: "Е", name: "Ерлан К.", date: "10 фев 2025", text: "Отличный электрик! Заменил всю проводку в квартире. Работал чисто, всё объяснил. Гарантию дал на год.", rating: 5 },
+              { bg: "bg-purple-500", letter: "Н", name: "Наталья П.", date: "28 фев 2025", text: "Срочно нужен был ремонт унитаза в выходной. Манас приехал за 30 минут, починил быстро. Оплата по факту.", rating: 5 },
             ].map((review) => (
-              <div key={review.name} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star key={i} size={18} className="fill-amber-400 text-amber-400" />
-                  ))}
+              <div key={review.name} className="bg-slate-50 rounded-[1.5rem] p-8 border border-slate-100">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 ${review.bg} rounded-full flex items-center justify-center text-white font-bold`}>
+                      {review.letter}
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900 text-[15px]">{review.name}</div>
+                      <div className="text-[12px] text-slate-400 font-medium">{review.date}</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: review.rating }).map((_, i) => (
+                      <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 italic">"{review.text}"</p>
-                <div>
-                  <p className="font-bold text-gray-900">{review.name}</p>
-                  <p className="text-xs text-gray-400">{review.district}</p>
-                </div>
+                <p className="text-slate-600 text-[14px] leading-relaxed">"{review.text}"</p>
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link to="/reviews" className="inline-flex items-center justify-center border-2 border-slate-200 text-slate-700 font-bold px-8 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+              Все отзывы
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Districts */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <span className="inline-block bg-blue-50 text-[#0095DA] text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-              ГЕОГРАФИЯ
-            </span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Обслуживаем все районы Алматы</h2>
-            <p className="text-lg text-gray-500">Быстрый выезд мастера в любой район города</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {seoData.districts.map((district) => (
-              <Link
-                key={district.id}
-                to={`/uslugi/vyzov-santehnika/${district.id}`}
-                className="group p-6 bg-white rounded-2xl border border-gray-100 shadow-sm text-center font-semibold hover:border-[#0095DA] hover:shadow-lg transition-all hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0095DA] transition-colors">
-                  <MapPin size={22} className="text-[#0095DA] group-hover:text-white transition-colors" />
+      {/* Booking Form (Вызвать мастера Form) */}
+      <section className="py-20 bg-slate-900 text-white overflow-hidden relative">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#1173D4] rounded-full blur-[100px]"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#1173D4] rounded-full blur-[100px]"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Нужен грамотный специалист?</h2>
+              <p className="text-lg text-slate-300 font-medium mb-10 leading-relaxed">
+                Оставьте заявку, и наш менеджер свяжется с вами в течение 5 минут для уточнения деталей. 
+              </p>
+              <div className="flex flex-col gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                    <Phone size={24} className="text-[#13B6EC]" />
+                  </div>
+                  <div>
+                    <div className="text-[13px] text-slate-400 font-medium mb-1">Звоните круглосуточно</div>
+                    <a href="tel:+77055535332" className="text-xl font-extrabold block hover:text-[#13B6EC] transition-colors">+7 705 553 53 32</a>
+                  </div>
                 </div>
-                <span className="text-gray-700 group-hover:text-[#0095DA] transition-colors">{district.name}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section for SEO */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-14">
-            <span className="inline-block bg-blue-50 text-[#0095DA] text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-              FAQ
-            </span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Часто задаваемые вопросы</h2>
-          </div>
-          <div className="space-y-4">
-            {[
-              { q: "Сколько стоит вызов сантехника в Алматы?", a: "Стоимость вызова сантехника начинается от 3 500 ₸. Точная цена зависит от сложности работ. Выезд по городу — бесплатно при заказе работ. Бесплатная консультация по телефону." },
-              { q: "Как быстро приедет мастер?", a: "Мастер приедет в любой район Алматы в течение 30 минут после вашего звонка. Работаем круглосуточно, без выходных и праздников." },
-              { q: "Даёте ли гарантию на работы?", a: "Да, мы предоставляем гарантию на все виды выполненных работ до 12 месяцев. На установленные материалы и запчасти — гарантия производителя." },
-              { q: "Работаете ли вы в выходные и праздники?", a: "Да, мы работаем 7 дней в неделю, 24 часа в сутки, включая все праздничные дни. Аварийный выезд возможен в любое время суток." },
-              { q: "Какие районы Алматы вы обслуживаете?", a: "Мы обслуживаем все 8 районов Алматы: Алатауский, Алмалинский, Ауэзовский, Бостандыкский, Жетысуский, Медеуский, Наурызбайский и Турксибский." },
-            ].map((faq) => (
-              <details key={faq.q} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden group">
-                <summary className="p-6 cursor-pointer font-bold text-gray-900 hover:text-[#0095DA] transition-colors flex items-center justify-between">
-                  {faq.q}
-                  <span className="text-[#0095DA] text-2xl group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-50 pt-4">
-                  {faq.a}
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                    <MapPin size={24} className="text-[#13B6EC]" />
+                  </div>
+                  <div>
+                    <div className="text-[13px] text-slate-400 font-medium mb-1">Наш адрес</div>
+                    <div className="text-[15px] font-bold">г. Алматы, мкр. Аксай 4-11</div>
+                  </div>
                 </div>
-              </details>
-            ))}
+              </div>
+            </div>
+
+            <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl text-slate-900">
+              <h3 className="text-2xl font-extrabold mb-6">Оставить заявку</h3>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-1.5">Ваше имя</label>
+                  <input type="text" id="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-[#1173D4] font-medium text-sm transition-all" required />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-bold text-slate-700 mb-1.5">Телефон</label>
+                  <input type="tel" id="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-[#1173D4] font-medium text-sm transition-all" required />
+                </div>
+                <div>
+                  <label htmlFor="service" className="block text-sm font-bold text-slate-700 mb-1.5">Услуга</label>
+                  <select id="service" value={formData.service} onChange={handleChange} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-[#1173D4] font-medium text-sm transition-all" required>
+                    <option value="" disabled>Что нужно сделать?</option>
+                    <option value="plumb">Сантехника</option>
+                    <option value="electric">Электрика</option>
+                    <option value="other">Другое</option>
+                  </select>
+                </div>
+                <button type="submit" className="w-full py-4 bg-[#1173D4] text-white font-bold rounded-xl hover:bg-[#0f67be] transition-colors mt-2">
+                  Отправить заявку
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-r from-[#0095DA] to-[#0074b3] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute w-96 h-96 rounded-full bg-white -top-20 -right-20" />
-          <div className="absolute w-64 h-64 rounded-full bg-white -bottom-10 -left-10" />
-        </div>
-        <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-          <h2 className="text-4xl font-extrabold mb-4">Нужен сантехник или электрик?</h2>
-          <p className="text-xl opacity-90 mb-8">Позвоните прямо сейчас — бесплатная консультация!</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+77055535332"
-              className="inline-flex items-center justify-center gap-3 bg-white text-[#0095DA] px-10 py-4 rounded-xl font-bold text-xl hover:bg-gray-50 transition-colors shadow-lg"
-            >
-              📞 +7 (705) 553-53-32
-            </a>
-            <a
-              href="https://wa.me/77055535332"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-[#4ADE80] text-gray-900 px-10 py-4 rounded-xl font-bold text-xl hover:bg-[#3dca72] transition-colors shadow-lg"
-            >
-              💬 Написать в WhatsApp
-            </a>
-          </div>
-        </div>
+      {/* Map Section */}
+      <section className="h-[400px] w-full relative">
+        <iframe 
+          src="https://yandex.ru/map-widget/v1/?ll=76.928610%2C43.238949&z=11" 
+          width="100%" 
+          height="100%" 
+          frameBorder="0" 
+          allowFullScreen={true}
+          className="absolute inset-0 grayscale contrast-125 opacity-90 sepia-[.2]"
+          title="Карта обслуживания Алматы"
+        ></iframe>
       </section>
-
-      {/* SEO Text Block */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto prose prose-lg">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Сантехник и электрик в Алматы — Мастер Манас
-          </h2>
-          <p className="text-gray-600 leading-relaxed text-sm">
-            Ищете надёжного сантехника или электрика в Алматы? Мастер Манас — это более 15 лет профессионального опыта в сфере сантехнических и электромонтажных работ. Мы оказываем полный спектр услуг для жителей всех районов Алматы: от мелкого ремонта смесителей и розеток до капитального ремонта систем водоснабжения и электропроводки.
-          </p>
-          <p className="text-gray-600 leading-relaxed text-sm">
-            Наши мастера выезжают по заявкам круглосуточно, 7 дней в неделю. Среднее время прибытия — 30 минут в любой район города. Мы используем только качественные материалы и профессиональный инструмент, что позволяет нам давать гарантию до 12 месяцев на все виды работ. Более 1000 довольных клиентов уже оценили наш профессионализм и ответственный подход.
-          </p>
-          <p className="text-gray-600 leading-relaxed text-sm">
-            Основные услуги: вызов сантехника, установка и ремонт смесителей, ремонт унитазов, установка ванн и душевых кабин, ремонт бойлеров, услуги электрика, ремонт электропроводки, установка люстр, розеток и выключателей, монтаж газовых котлов, установка фильтров для воды. Работаем в Алатауском, Алмалинском, Ауэзовском, Бостандыкском, Жетысуском, Медеуском, Наурызбайском и Турксибском районах.
-          </p>
-        </div>
-      </section>
+      
     </div>
   );
 };

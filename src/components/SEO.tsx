@@ -3,10 +3,11 @@ import { useEffect } from "react";
 interface SEOProps {
   title: string;
   description: string;
+  keywords?: string;
   canonical?: string;
 }
 
-const SEO = ({ title, description, canonical }: SEOProps) => {
+const SEO = ({ title, description, keywords, canonical }: SEOProps) => {
   useEffect(() => {
     document.title = title;
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -17,6 +18,18 @@ const SEO = ({ title, description, canonical }: SEOProps) => {
       meta.name = "description";
       meta.content = description;
       document.head.appendChild(meta);
+    }
+
+    if (keywords) {
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute("content", keywords);
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "keywords";
+        meta.content = keywords;
+        document.head.appendChild(meta);
+      }
     }
 
     if (canonical) {
@@ -30,7 +43,7 @@ const SEO = ({ title, description, canonical }: SEOProps) => {
         document.head.appendChild(link);
       }
     }
-  }, [title, description, canonical]);
+  }, [title, description, keywords, canonical]);
 
   return null;
 };

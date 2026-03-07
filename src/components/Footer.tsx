@@ -1,77 +1,126 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Clock, MessageCircle, Droplet, ChevronRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a1628] text-gray-300 pt-16 pb-8">
+    <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#0095DA] rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                💧
+            <Link to="/" className="flex items-center gap-3 mb-6 group inline-flex">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#1173D4] to-[#13B6EC] rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform duration-300">
+                <Droplet size={22} className="fill-white" />
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg">Сантехник Алматы</h3>
-                <p className="text-xs text-gray-500">Мастер Манас</p>
+                <h3 className="text-xl font-extrabold leading-none text-[#1173D4] tracking-tight">Сантехник Алматы</h3>
+                <p className="text-xs text-gray-500 font-medium">Мастер Манас</p>
               </div>
-            </div>
-            <p className="text-sm leading-relaxed">
+            </Link>
+            <p className="text-sm text-gray-600 leading-relaxed mb-6">
               Профессиональные сантехнические и электрические услуги в Алматы. Работаем с 2010 года.
             </p>
+            <div className="flex gap-4">
+              <div className="bg-blue-50 px-3 py-2 rounded-lg text-center">
+                <div className="font-extrabold text-[#1173D4] text-lg leading-tight">1000+</div>
+                <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Клиентов</div>
+              </div>
+              <div className="bg-green-50 px-3 py-2 rounded-lg text-center">
+                <div className="font-extrabold text-green-600 text-lg leading-tight">10</div>
+                <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Лет опыта</div>
+              </div>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Popular Services */}
           <div>
-            <h4 className="text-white font-bold mb-4">Услуги</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/uslugi/vyzov-santehnika/medeuskij" className="hover:text-[#0095DA] transition-colors">Вызов сантехника</Link></li>
-              <li><Link to="/uslugi/uslugi-elektrika/medeuskij" className="hover:text-[#0095DA] transition-colors">Услуги электрика</Link></li>
-              <li><Link to="/uslugi/ustanovka-smesitelya/medeuskij" className="hover:text-[#0095DA] transition-colors">Установка смесителя</Link></li>
-              <li><Link to="/uslugi/remont-unitaza/medeuskij" className="hover:text-[#0095DA] transition-colors">Ремонт унитаза</Link></li>
-              <li><Link to="/uslugi/remont-boilera/medeuskij" className="hover:text-[#0095DA] transition-colors">Ремонт бойлера</Link></li>
+            <h4 className="text-gray-900 font-extrabold mb-6 text-lg tracking-tight">Популярные услуги</h4>
+            <ul className="space-y-3">
+              {[
+                { name: "Вызов сантехника", path: "/uslugi/vyzov-santehnika/medeuskij" },
+                { name: "Услуги электрика", path: "/uslugi/uslugi-elektrika/medeuskij" },
+                { name: "Установка смесителя", path: "/uslugi/ustanovka-smesitelya/medeuskij" },
+                { name: "Ремонт унитаза", path: "/uslugi/remont-unitaza/medeuskij" },
+                { name: "Ремонт бойлера", path: "/uslugi/remont-boilera/medeuskij" }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link to={link.path} className="text-gray-600 text-sm hover:text-[#1173D4] transition-colors flex items-center gap-2 group">
+                    <ChevronRight size={14} className="text-gray-400 group-hover:text-[#1173D4] transition-colors" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Districts */}
+          {/* Useful Articles */}
           <div>
-            <h4 className="text-white font-bold mb-4">Районы</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/uslugi/vyzov-santehnika/almalinskij" className="hover:text-[#0095DA] transition-colors">Алмалинский</Link></li>
-              <li><Link to="/uslugi/vyzov-santehnika/medeuskij" className="hover:text-[#0095DA] transition-colors">Медеуский</Link></li>
-              <li><Link to="/uslugi/vyzov-santehnika/bostandykskij" className="hover:text-[#0095DA] transition-colors">Бостандыкский</Link></li>
-              <li><Link to="/uslugi/vyzov-santehnika/auezovskij" className="hover:text-[#0095DA] transition-colors">Ауэзовский</Link></li>
-              <li><Link to="/uslugi/vyzov-santehnika/turksibskij" className="hover:text-[#0095DA] transition-colors">Турксибский</Link></li>
+            <h4 className="text-gray-900 font-extrabold mb-6 text-lg tracking-tight">Полезные статьи</h4>
+            <ul className="space-y-3">
+              {[
+                "Как выбрать смеситель",
+                "Инструмент сантехника",
+                "Замена проводки: с чего начать?",
+                "Короткое замыкание: что делать?"
+              ].map((title) => (
+                <li key={title}>
+                  <Link to="/blog" className="text-gray-600 text-sm hover:text-[#1173D4] transition-colors flex items-center gap-2 group">
+                    <ChevronRight size={14} className="text-gray-400 group-hover:text-[#1173D4] transition-colors" />
+                    {title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contacts */}
           <div>
-            <h4 className="text-white font-bold mb-4">Контакты</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-[#0095DA] shrink-0" />
-                <a href="tel:+77055535332" className="hover:text-white transition-colors">+7 (705) 553-53-32</a>
+            <h4 className="text-gray-900 font-extrabold mb-6 text-lg tracking-tight">Контакты</h4>
+            <ul className="space-y-4">
+              <li>
+                <a href="tel:+77055535332" className="flex items-start gap-3 group">
+                  <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-[#1173D4] transition-colors">
+                    <Phone size={14} className="text-[#1173D4] group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-900 group-hover:text-[#1173D4] transition-colors">+7 (705) 553-53-32</div>
+                    <div className="text-xs text-gray-500">Круглосуточно, без выходных</div>
+                  </div>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <MessageCircle size={18} className="text-[#0095DA] shrink-0" />
-                <a href="https://wa.me/77055535332" className="hover:text-white transition-colors">WhatsApp</a>
+              <li>
+                <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                  <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center shrink-0 group-hover:bg-[#25D366] transition-colors">
+                    <MessageCircle size={14} className="text-[#25D366] group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-900 group-hover:text-[#25D366] transition-colors">Написать в WhatsApp</div>
+                    <div className="text-xs text-gray-500">Ответим за 5 минут</div>
+                  </div>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <MapPin size={18} className="text-[#0095DA] shrink-0" />
-                г. Алматы, мкр. Аксай 4-11
-              </li>
-              <li className="flex items-center gap-3">
-                <Clock size={18} className="text-[#0095DA] shrink-0" />
-                Круглосуточно, без выходных
+              <li className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0">
+                  <MapPin size={14} className="text-gray-600" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-gray-900">г. Алматы</div>
+                  <div className="text-xs text-gray-500">мкр. Аксай 4-11</div>
+                </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
-          © 2025 Мастер Манас — Сантехник и Электрик в Алматы. Все права защищены.
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-gray-500 font-medium tracking-wide">
+            © {new Date().getFullYear()} Мастер Манас. Все права защищены.
+          </div>
+          <div className="flex items-center gap-6 text-sm text-gray-500">
+            <Link to="/about" className="hover:text-[#1173D4] transition-colors">О нас</Link>
+            <Link to="/contacts" className="hover:text-[#1173D4] transition-colors">Политика конфиденциальности</Link>
+          </div>
         </div>
       </div>
     </footer>

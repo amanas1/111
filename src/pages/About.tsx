@@ -1,111 +1,129 @@
 import SEO from "../components/SEO";
-import { CheckCircle, Shield, Clock, ThumbsUp, Wrench, Users } from "lucide-react";
+import { Users, Calendar, ShieldCheck, Star, CheckCircle2, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
-        title="О нас | Сантехник и Электрик в Алматы - Мастер Манас"
-        description="Узнайте больше о нас. Профессиональные услуги сантехника и электрика в Алматы. Опыт более 10 лет, гарантия на все виды работ, круглосуточный выезд."
+        title="О компании | Сантехник и Электрик в Алматы - Мастер Манас"
+        description="Узнайте больше о нас. Профессиональные услуги сантехника и электрика в Алматы. Опыт более 10 лет, гарантия на все виды работ."
       />
       
       {/* Hero Section */}
-      <section className="bg-[#0095DA] text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 shadow-sm">О компании "Мастер Манас"</h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-50">
-              Ваш надежный партнер в решении любых бытовых проблем. Мы предоставляем профессиональные услуги сантехника и электрика в Алматы.
-            </p>
+      <section className="bg-slate-50 py-12 md:py-16">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="flex gap-2 text-sm text-slate-500 font-medium mb-6">
+            <Link to="/" className="hover:text-[#1173D4] transition-colors">Главная</Link>
+            <span>/</span>
+            <span className="text-slate-900">О компании</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">О компании Мастер Манас</h1>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Наша история */}
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="p-8 md:p-12">
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 w-full text-center">Наш подход к работе</h2>
-                <p className="mb-6">
-                  Мы работаем на рынке бытовых услуг Алматы более 10 лет. За это время мы сформировали команду настоящих профессионалов, которые любят свое дело и ценят каждого клиента. Наша главная цель — предоставить качественный сервис по доступным ценам, обеспечивая комфорт и безопасность в ваших домах.
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Наша история</h2>
+              <div className="space-y-4 text-lg text-slate-600 leading-relaxed font-medium">
+                <p>
+                  Компания "Мастер Манас" была основана в 2015 году с одной главной целью — предоставлять жителям Алматы качественные и честные услуги в сфере сантехники и электрики. 
                 </p>
-                <p className="mb-8">
-                  В штате компании "Мастер Манас" работают только квалифицированные специалисты с профильным образованием и допуском к соответствующим видам работ. Мы регулярно повышаем квалификацию наших мастеров и следим за новинками рынка строительных материалов и технологий.
+                <p>
+                  Мы начинали как небольшая бригада мастеров, объединенных общими принципами: делать работу на совесть, не навязывать лишние услуги и всегда приезжать вовремя.
                 </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#0095DA] shadow-md mb-4">
-                      <Clock size={32} />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Оперативность</h3>
-                    <p className="text-gray-600">Мы ценим ваше время. Мастер прибывает на объект в точно назначенное время, а при экстренном вызове — в течение 30-45 минут.</p>
-                  </div>
-                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#0095DA] shadow-md mb-4">
-                      <Shield size={32} />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Надежность</h3>
-                    <p className="text-gray-600">Мы используем только качественные, сертифицированные материалы от проверенных поставщиков. Это залог долговечности ремонта.</p>
-                  </div>
-                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#0095DA] shadow-md mb-4">
-                      <Users size={32} />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Опытные мастера</h3>
-                    <p className="text-gray-600">Средний стаж работы наших специалистов составляет 8 лет. Мы справляемся с задачами любой сложности.</p>
-                  </div>
-                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#0095DA] shadow-md mb-4">
-                      <ThumbsUp size={32} />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Гарантия качества</h3>
-                    <p className="text-gray-600">Мы уверены в качестве своих услуг, поэтому предоставляем официальную гарантию на все выполненные работы до 12 месяцев.</p>
-                  </div>
-                </div>
-
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Почему выбирают нас?</h2>
-                <ul className="space-y-4 mb-8">
-                  {[
-                    "Прозрачное ценообразование: мы озвучиваем стоимость до начала работ.",
-                    "Бесплатный выезд и диагностика (при заказе ремонта).",
-                    "Работаем круглосуточно, без выходных и праздников.",
-                    "Оставляем после себя чистоту и порядок.",
-                    "Скидки пенсионерам и постоянным клиентам."
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="text-[#0095DA] mr-3 mt-1 flex-shrink-0" size={20} />
-                      <span className="text-gray-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p>
+                  Сегодня мы гордимся тем, что стали надежным партнером для тысяч семей и компаний. Наша команда разрослась, но принципы остались неизменными: профессионализм, ответственность и уважение к каждому клиенту.
+                </p>
               </div>
             </div>
-            <div className="bg-gray-50 p-8 border-t border-gray-100 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Готовы доверить нам решение вашей проблемы?</h3>
-              <p className="text-gray-600 mb-6">Мы всегда на связи и готовы приехать в любой район Алматы.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+77055535332"
-                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-[#0095DA] hover:bg-[#0084c0] shadow-lg shadow-blue-500/30 transition-all hover:scale-105"
-                >
-                  Позвонить мастеру
-                </a>
-                <Link 
-                  to="/services"
-                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-[#0095DA] bg-white border-2 border-[#0095DA] hover:bg-blue-50 transition-all"
-                >
-                  Посмотреть услуги
-                </Link>
+
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
+                <Users size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
+                <span className="text-3xl font-extrabold text-slate-900 block mb-1">1000+</span>
+                <span className="text-[15px] text-slate-500 font-medium">клиентов</span>
+              </div>
+              <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
+                <Calendar size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
+                <span className="text-3xl font-extrabold text-slate-900 block mb-1">10 лет</span>
+                <span className="text-[15px] text-slate-500 font-medium">на рынке</span>
+              </div>
+              <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
+                <ShieldCheck size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
+                <span className="text-[17px] font-extrabold text-slate-900 block mb-1">Гарантия 1 год</span>
+                <span className="text-[15px] text-slate-500 font-medium">на работы</span>
+              </div>
+              <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
+                <Star size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
+                <span className="text-[17px] font-extrabold text-slate-900 block mb-1">Рейтинг 4.9/5</span>
+                <span className="text-[15px] text-slate-500 font-medium">по отзывам</span>
               </div>
             </div>
+
           </div>
         </div>
       </section>
+
+      {/* Наши принципы */}
+      <section className="py-16 md:py-24 bg-slate-100/50">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Наши принципы</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Честность", desc: "Открытые цены без скрытых доплат." },
+              { title: "Качество", desc: "Используем только проверенные материалы." },
+              { title: "Скорость", desc: "Выезжаем в течение часа." },
+              { title: "Ответственность", desc: "Даем гарантию на все работы." },
+              { title: "Профессионализм", desc: "Постоянно повышаем квалификацию." },
+              { title: "Клиентоориентированность", desc: "Каждый клиент важен для нас." },
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <CheckCircle2 size={28} strokeWidth={2} className="text-green-500 mb-4" />
+                <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-[15px] text-slate-500 font-medium">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Сертификаты и лицензии */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Сертификаты и лицензии</h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Допуск ГОСТ", desc: "Сертификат соответствия стандартам ГОСТ РК." },
+              { title: "Электробезопасность", desc: "Допуск к работам с электроустановками 3-й группы." },
+              { title: "Пожарная безопасность", desc: "Сертификат прохождения обучения ПТМ." },
+              { title: "Сварные соединения", desc: "Лицензия на проведение сварочных работ." },
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 text-center flex flex-col items-center">
+                <div className="w-16 h-16 bg-blue-50 text-[#1173D4] rounded-full flex items-center justify-center mb-6">
+                  <Award size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-[14px] text-slate-500 font-medium leading-loose">{item.desc}</p>
+                <div className="mt-4 inline-block px-3 py-1 bg-green-50 text-green-600 text-[11px] font-bold uppercase tracking-wider rounded-md border border-green-100">
+                  Сертифицировано
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

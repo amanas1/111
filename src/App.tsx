@@ -13,6 +13,11 @@ import Portfolio from "./pages/Portfolio";
 import Reviews from "./pages/Reviews";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
+import Calculator from "./pages/Calculator";
+import Booking from "./pages/Booking";
+import FeedbackPage from "./pages/FeedbackPage";
+import ServiceMap from "./pages/ServiceMap";
+import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
@@ -38,6 +43,11 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/tools/calculator" element={<Calculator />} />
+          <Route path="/tools/booking" element={<Booking />} />
+          <Route path="/tools/feedback" element={<FeedbackPage />} />
+          <Route path="/tools/service-map" element={<ServiceMap />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <FloatingButtons />

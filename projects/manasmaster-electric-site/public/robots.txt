@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://mana.kz/sitemap.xml
+Sitemap: https://manasmaster.kz/sitemap.xml

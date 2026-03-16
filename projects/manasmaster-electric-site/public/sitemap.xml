@@ -1,704 +1,542 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mana.kz/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/vyzov-santehnika/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/vyzov-elektrika/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustranenie-protechek/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-lyustr/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-smesitelya/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-provodki/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-smesitelya/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-rozetok/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-unitaza/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/sborka-schitov/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-batarei/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/podkluchenie-tehniki/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-stiralnoy-mashiny/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/poisk-provodki/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-posudomoechnoy-mashiny/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/ustanovka-generatora/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/alatauskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/almalinskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/auezovskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/bostandykskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/zhetysuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/medeuskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/nauryzbajskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/remont-dushevih-kabin/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/uslugi/remont-lustry/turksibskij</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-vanny/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/remont-boilera/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/alatauskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/almalinskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/auezovskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/bostandykskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/zhetysuskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/medeuskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/nauryzbajskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/uslugi/ustanovka-filtra-vody/turksibskij</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/santehnik-alatauskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-alatauskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/santehnik-almalinskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-almalinskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/santehnik-auezovskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-auezovskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/santehnik-bostandykskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-bostandykskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/santehnik-zhetysuskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-zhetysuskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/santehnik-medeuskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-medeuskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/santehnik-nauryzbajskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-nauryzbajskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/santehnik-turksibskij-rayon</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/santehnik-turksibskij-rayon</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/vyzov-santehnika-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/vyzov-elektrika-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/ustranenie-protechek-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/ustanovka-lyustr-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/ustanovka-smesitelya-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/remont-provodki-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/remont-smesitelya-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/ustanovka-rozetok-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/remont-unitaza-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/sborka-schitov-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/remont-batarei-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/podkluchenie-tehniki-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/ustanovka-stiralnoy-mashiny-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/poisk-provodki-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/ustanovka-posudomoechnoy-mashiny-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/ustanovka-generatora-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mana.kz/remont-dushevih-kabin-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/ustanovka-vanny-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/remont-boilera-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mana.kz/ustanovka-filtra-vody-almaty</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://manasmaster.kz/remont-lustry-almaty</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

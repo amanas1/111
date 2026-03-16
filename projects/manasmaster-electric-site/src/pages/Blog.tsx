@@ -148,9 +148,40 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
-        title="Блог профессионального электрика | Полезные статьи и советы"
-        description="Полезные статьи об электромонтаже, безопасности, выборе светильников и современных технологиях для дома. Советы от профессионалов Алматы."
+        title="Блог профессионального электрика Алматы | Полезные статьи и советы"
+        description="Полезные статьи об электромонтажных работах, безопасности, выборе светильников и современных технологиях в Алматы. Советы от мастеров Мастер Манас."
+        keywords="Электрик Алматы статьи, советы электрика, электромонтажные работы Алматы, как вызвать электрика, безопасность электрики, ремонт проводки советы"
+        canonical="https://manasmaster.kz/blog"
       />
+
+      {/* Structured Data: Blog */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "Блог Мастер Манас — Электрик Алматы",
+          "description": "Полезные статьи об электрике и электромонтаже в Алматы",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Мастер Манас",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://manasmaster.kz/favicon.png"
+            }
+          },
+          "blogPost": posts.map(post => ({
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": post.excerpt,
+            "image": `https://manasmaster.kz${post.image}`,
+            "datePublished": "2024-03-16", // Baseline date
+            "author": {
+              "@type": "Person",
+              "name": "Манас"
+            }
+          }))
+        })}
+      </script>
       
       {/* Hero Section */}
       <section className="bg-[#DC2626] text-white pt-16 pb-12 relative overflow-hidden">

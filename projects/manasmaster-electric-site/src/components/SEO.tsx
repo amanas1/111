@@ -32,6 +32,39 @@ const SEO = ({ title, description, keywords, canonical }: SEOProps) => {
       }
     }
 
+    // Open Graph
+    const setOgTag = (property: string, content: string) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (tag) {
+        tag.setAttribute("content", content);
+      } else {
+        tag = document.createElement("meta");
+        tag.setAttribute("property", property);
+        tag.setAttribute("content", content);
+        document.head.appendChild(tag);
+      }
+    };
+
+    setOgTag("og:title", title);
+    setOgTag("og:description", description);
+    setOgTag("og:url", canonical || window.location.href);
+
+    // Twitter
+    const setTwitterTag = (name: string, content: string) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (tag) {
+        tag.setAttribute("content", content);
+      } else {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
+        tag.setAttribute("content", content);
+        document.head.appendChild(tag);
+      }
+    };
+
+    setTwitterTag("twitter:title", title);
+    setTwitterTag("twitter:description", description);
+
     if (canonical) {
       let link = document.querySelector('link[rel="canonical"]');
       if (link) {

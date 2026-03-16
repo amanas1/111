@@ -2,7 +2,7 @@ import fs from 'fs';
 const seoData = JSON.parse(fs.readFileSync('./src/data/seo-data.json', 'utf8'));
 
 
-const BASE_URL = 'https://mana.kz';
+const BASE_URL = 'https://manasmaster.kz';
 const currentDate = new Date().toISOString().split('T')[0];
 
 const generateSitemap = () => {

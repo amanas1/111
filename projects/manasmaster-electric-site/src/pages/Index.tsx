@@ -25,10 +25,68 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Вызов электрика в Алматы 24/7 | Услуги электрика — Мастер Манас"
-        description="Профессиональные услуги электрика в Алматы. Срочный выезд за 30 минут круглосуточно 24/7. Ремонт проводки, установка люстр, сборка щитов с гарантией 1 год."
-        keywords="электрик алматы, вызвать электрика, услуги электрика, электромонтажные работы, вызов электрика алматы, электрик на дом круглосуточно, ремонт проводки, монтаж розеток, установка люстры, аварийный выезд электрика, мастер на час электрик, замена автоматов, монтаж электрощита, электрик алматы прайс"
+        title="Электрик Алматы | Вызвать электрика 24/7 — Услуги электрика и электромонтажные работы"
+        description="Профессиональные услуги электрика в Алматы. Срочный выезд электрика на дом 24/7 за 30 минут. Электромонтажные работы любой сложности: ремонт проводки, установка люстры, сборка щита."
+        keywords="Электрик Алматы, электрик, электромонтажные работы, вызвать электрика, электрик круглосуточно, услуги электрика в Алматы, ремонт проводки, установка люстр, монтаж розеток, электрик на дом, аварийный электрик"
+        canonical="https://manasmaster.kz/"
       />
+
+      {/* Schema.org for Electrician */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Electrician",
+          "name": "Мастер Манас — Электрик Алматы",
+          "image": "https://manasmaster.kz/images/hero_electrician.png",
+          "url": "https://manasmaster.kz",
+          "telephone": "+77055535332",
+          "priceRange": "₸₸",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "мкр. Аксай 4-11",
+            "addressLocality": "Almaty",
+            "addressCountry": "KZ"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 43.238949,
+            "longitude": 76.889709
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Услуги электрика",
+            "itemListElement": seoData.services.map(s => ({
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": s.title,
+                "description": s.description
+              },
+              "price": s.price.replace(/[^0-9]/g, ''),
+              "priceCurrency": "KZT"
+            }))
+          }
+        })}
+      </script>
 
       {/* Hero Section */}
       <section className="relative min-h-[650px] flex items-center overflow-hidden">

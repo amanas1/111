@@ -32,7 +32,7 @@ const generateSitemap = () => {
   // Add District landing pages
   seoData.districts.forEach(district => {
     xml += `  <url>
-    <loc>${BASE_URL}/santehnik-${district.id}-rayon</loc>
+    <loc>${BASE_URL}/elektrik-${district.id}-rayon</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

@@ -4,7 +4,7 @@ import path from 'path';
 const seoData = JSON.parse(fs.readFileSync('./src/data/seo-data.json', 'utf8'));
 
 const DIST_DIR = path.resolve('./dist');
-const BASE_URL = 'https://mana.kz';
+const BASE_URL = 'https://manasmaster.kz';
 
 // Ensure dist exists (incase run standalone)
 if (!fs.existsSync(DIST_DIR)) {
@@ -27,21 +27,17 @@ seoData.services.forEach(service => {
   seoData.districts.forEach(district => {
     // Generate Metadata
     const serviceTitle = service.seoTitle || service.title;
-    const title = `${serviceTitle} в ${district.name} районе | Мастер Алматы 24/7`;
-    const description = `Срочный ${service.title.toLowerCase()} в ${district.name} районе Алматы. Выезд за 30 мин! Гарантия на работы до 1 года. Звоните ☎ +7 (705) 553-53-32, +7 (707) 479-10-20`;
-    const keywords = `${service.title.toLowerCase()}, ${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()} ${district.name} район, вызов сантехника, ремонт сантехники, услуги сантехника`;
+    const title = `${serviceTitle} в районе ${district.name} | Электрик Алматы 24/7`;
+    const description = `Срочный ${service.title.toLowerCase()} в ${district.name} районе Алматы. Выезд за 30-40 мин! Гарантия на электромонтажные работы до 12 месяцев. Звоните ☎ +7 (705) 553-53-32`;
+    const keywords = `${service.title.toLowerCase()}, ${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()} ${district.name} район, вызов электрика, услуги электрика, электромонтажные работы`;
     const url = `${BASE_URL}/uslugi/${service.id}/${district.id}`;
 
     // Generate Structured Data
     const structuredData = {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": title,
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Мастер Манас — Сантехник Алматы",
-        "telephone": "+7-705-553-53-32, +7-707-479-10-20"
-      },
+      "@type": "Electrician",
+      "name": "Мастер Манас — Электрик Алматы",
+      "telephone": "+7-705-553-53-32",
       "areaServed": {
         "@type": "City",
         "name": "Алматы",
@@ -81,19 +77,19 @@ seoData.services.forEach(service => {
   });
 });
 
-// Generate District Landing Pages: /santehnik-:districtId-rayon
+// Generate District Landing Pages: /elektrik-:districtId-rayon
 seoData.districts.forEach(district => {
-  const service = seoData.services.find(s => s.id === 'vyzov-santehnika'); // Use generic service
-  const title = `Сантехник ${district.name} Алматы | Вызов мастера 24/7`;
-  const description = `Профессиональный сантехник в ${district.nameGenitive} Алматы. Срочный выезд за 30 минут, стаж 15 лет. Цены от 3500 тг. Звоните прямо сейчас!`;
-  const url = `${BASE_URL}/santehnik-${district.id}-rayon`;
+  const service = seoData.services.find(s => s.id === 'vyzov-elektrika'); // Use generic service
+  const title = `Электрик в ${district.name} районе Алматы | Вызов мастера 24/7`;
+  const description = `Профессиональный электрик в ${district.nameGenitive} районе Алматы. Срочный выезд за 30 минут, стаж 15 лет. Цены от 3500 тг. Звоните прямо сейчас!`;
+  const url = `${BASE_URL}/elektrik-${district.id}-rayon`;
   
   let html = template
     .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
     .replace(/<meta name="description" content=".*?"\s*\/>/, `<meta name="description" content="${description}" />`)
     .replace(/<link rel="canonical" href=".*?"\s*\/>/, `<link rel="canonical" href="${url}" />`);
 
-  const routeDir = path.join(DIST_DIR, `santehnik-${district.id}-rayon`);
+  const routeDir = path.join(DIST_DIR, `elektrik-${district.id}-rayon`);
   ensureDir(routeDir);
   fs.writeFileSync(path.join(routeDir, 'index.html'), html);
   generatedCount++;
@@ -101,8 +97,8 @@ seoData.districts.forEach(district => {
 
 // Generate Service Landing Pages: /:serviceId-almaty
 seoData.services.forEach(service => {
-  const title = `${service.title} Алматы | Цены от ${service.price} | Выезд за 20 мин`;
-  const description = `${service.title} в Алматы круглосуточно. Качественный ремонт и установка. Гарантия 12 месяцев. Профессиональные мастера. ☎ +7 (705) 553-53-32, +7 (707) 479-10-20`;
+  const title = `${service.title} Алматы | Цены от ${service.price} | Выезд за 30 мин`;
+  const description = `${service.title} в Алматы круглосуточно. Качественный электромонтаж. Гарантия 12 месяцев. Профессиональные электрики. ☎ +7 (705) 553-53-32`;
   const url = `${BASE_URL}/${service.id}-almaty`;
 
   let html = template

@@ -116,7 +116,9 @@ const Blog = () => {
       author: "Мастер Манас",
       image: "/images/blog/emergency.png",
       category: "Безопасность",
-      link: "/blog/emergency"
+      link: "/blog/emergency",
+      alt: "Аварийное освещение и системы безопасности в Алматы",
+      titleTag: "Аварийное освещение: правила и нормы монтажа"
     },
     {
       id: 12,
@@ -126,7 +128,9 @@ const Blog = () => {
       author: "Мастер Манас",
       image: "/images/blog/ev.png",
       category: "Техника",
-      link: "/blog/ev"
+      link: "/blog/ev",
+      alt: "Монтаж зарядной станции для электромобиля в частном доме",
+      titleTag: "Установка зарядки для электромобиля (EV) в Алматы"
     }
   ];
 

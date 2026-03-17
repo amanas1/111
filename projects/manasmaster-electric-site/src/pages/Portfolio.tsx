@@ -11,6 +11,8 @@ const Portfolio = () => {
       description: "Выполнен полный демонтаж старой алюминиевой проводки и монтаж новой медной системы по ГОСТу. Установка нового щитка, розеток и выключателей во всей квартире.",
       time: "4 дня",
       price: "180 000 ₸",
+      alt: "Процесс замены старой электропроводки на новую медную в квартире",
+      titleTag: "Замена проводки в ЖК Манхэттен - Мастер Манас"
     },
     {
       id: 2,
@@ -20,6 +22,8 @@ const Portfolio = () => {
       description: "Проектирование и сборка распределительного щита с разделением на группы. Установка УЗО, реле напряжения и автоматики Schneider Electric.",
       time: "2 дня",
       price: "120 000 ₸",
+      alt: "Собранный электрический щит с автоматикой Schneider Electric",
+      titleTag: "Сборка щитового оборудования в коттедже - Алматы"
     },
     {
       id: 3,
@@ -110,7 +114,8 @@ const Portfolio = () => {
                 <div className="w-full h-64 rounded-2xl overflow-hidden relative mb-6">
                   <img 
                     src={project.image} 
-                    alt={`Пример работы: ${project.title}`} 
+                    alt={project.alt || `Пример работы: ${project.title}`} 
+                    title={project.titleTag || project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-60" />

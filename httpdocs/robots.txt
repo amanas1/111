@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Запрещаем технические папки
+Disallow: /logs/
+Disallow: /error_docs/
+Disallow: /dist/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /_vite/
+Disallow: /vite.config.ts
+Disallow: /package.json
+Disallow: /tsconfig.json
+
+# Разрешаем статику
+Allow: /images/
+Allow: /assets/
+Allow: /data/
+
+# Карта сайта
+Sitemap: https://mana.kz/sitemap.xml

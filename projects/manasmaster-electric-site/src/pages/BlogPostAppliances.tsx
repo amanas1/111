@@ -21,7 +21,8 @@ const BlogPostAppliances = () => {
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
                 src="/images/blog/appliances.png" 
-                alt="Подключение бытовой техники" 
+                alt="Процесс подключения мощной варочной панели электриком" 
+                title="Подключение бытовой техники — Алматы"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>

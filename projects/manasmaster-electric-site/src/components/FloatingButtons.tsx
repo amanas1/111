@@ -20,7 +20,7 @@ const FloatingButtons = () => {
         <Phone size={24} className="fill-white" />
       </a>
       <a
-        href="tel:+77055535332"
+        href="tel:+77074791020"
         className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-800 text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
         title="Позвонить (дополнительный)"
       >

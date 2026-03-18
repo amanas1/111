@@ -52,8 +52,8 @@ const Header = () => {
                 +7 (705) 553-53-32
               </a>
               <span className="opacity-50 text-white/50">|</span>
-              <a href="tel:+77055535332" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                +7 (705) 553-53-32
+              <a href="tel:+77074791020" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                +7 (707) 479-10-20
               </a>
             </div>
             <div className="hidden md:flex items-center gap-2">
@@ -273,7 +273,7 @@ const Header = () => {
                   <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
                   705 553-53-32
                 </a>
-                <a href="tel:+77055535332" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white rounded-xl border border-red-50 text-[13px] font-bold text-[#DC2626] shadow-sm active:bg-red-50 transition-colors">
+                <a href="tel:+77074791020" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white rounded-xl border border-red-50 text-[13px] font-bold text-[#DC2626] shadow-sm active:bg-red-50 transition-colors">
                   <span className="w-2 h-2 rounded-full bg-[#FB7185] animate-pulse"></span>
                   707 479-10-20
                 </a>

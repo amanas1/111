@@ -171,14 +171,20 @@ const Portfolio = () => {
                     </div>
                   </div>
 
-                  <a 
-                    href="https://wa.me/77055535332"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold rounded-xl text-white bg-[#DC2626] hover:bg-[#B91C1C] shadow-lg shadow-red-500/20 transition-all hover:-translate-y-0.5"
-                  >
-                    Рассчитать свой проект
-                  </a>
+                  <div className="flex flex-col gap-2">
+                    <a 
+                      href="tel:+77055535332"
+                      className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold rounded-xl text-white bg-[#DC2626] hover:bg-[#B91C1C] shadow-lg shadow-red-500/20 transition-all"
+                    >
+                      Позвонить 705
+                    </a>
+                    <a 
+                      href="tel:+77074791020"
+                      className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold rounded-xl text-white bg-[#DC2626] hover:bg-[#B91C1C] shadow-lg shadow-red-500/20 transition-all"
+                    >
+                      Позвонить 707
+                    </a>
+                  </div>
                 </div>
 
               </div>

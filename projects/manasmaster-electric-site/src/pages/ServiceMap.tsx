@@ -137,13 +137,22 @@ const ServiceMapPage = () => {
 
                 <div className="mt-8 pt-8 border-t border-gray-100">
                   <p className="text-sm text-gray-500 mb-4 text-center">Бесплатный выезд мастера при заказе работы!</p>
-                  <a
-                    href="tel:+77055535332"
-                    className="w-full flex items-center justify-center px-6 py-4 text-[15px] font-bold rounded-xl text-white bg-[#DC2626] hover:bg-[#B91C1C] shadow-lg shadow-red-500/20 transition-all hover:-translate-y-0.5 gap-2"
-                  >
-                    <Phone size={18} />
-                    Связаться с нами
-                  </a>
+                  <div className="flex flex-col gap-3">
+                    <a
+                      href="tel:+77055535332"
+                      className="w-full flex items-center justify-center px-6 py-4 text-[15px] font-bold rounded-xl text-white bg-[#DC2626] hover:bg-[#B91C1C] shadow-lg shadow-red-500/20 transition-all gap-2"
+                    >
+                      <Phone size={18} />
+                      +7 (705) 553-53-32
+                    </a>
+                    <a
+                      href="tel:+77074791020"
+                      className="w-full flex items-center justify-center px-6 py-4 text-[15px] font-bold rounded-xl text-white bg-[#DC2626] hover:bg-[#B91C1C] shadow-lg shadow-red-500/20 transition-all gap-2"
+                    >
+                      <Phone size={18} />
+                      +7 (707) 479-10-20
+                    </a>
+                  </div>
                 </div>
               </div>
 

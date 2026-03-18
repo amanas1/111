@@ -27,7 +27,7 @@ const ServiceDistrictPage = () => {
   }
 
   const title = `${service.title} в ${district.nameGenitive} Алматы | Мастер Манас`;
-  const description = `${service.title} в ${district.nameGenitive} Алматы — ${service.price}. Выезд мастера 24/7 за 30 минут. Гарантия 12 месяцев. ☎ +7 (705) 553-53-32`;
+  const description = `${service.title} в ${district.nameGenitive} Алматы — ${service.price}. Выезд мастера 24/7 за 30 минут. Гарантия 12 месяцев. ☎ +7 (705) 553-53-32, +7 (707) 479-10-20`;
 
   // Get other services for cross-linking
   const otherServices = seoData.services.filter((s) => s.id !== serviceId).slice(0, 4);
@@ -186,13 +186,22 @@ const ServiceDistrictPage = () => {
                 </div>
               </div>
 
-              <a
-                href="tel:+77055535332"
-                className="w-full flex items-center justify-center gap-2 bg-[#4ADE80] hover:bg-[#3dca72] text-gray-900 py-4 rounded-xl font-bold text-lg transition-colors shadow-md"
-              >
-                <Phone size={20} />
-                Заказать
-              </a>
+              <div className="flex flex-col gap-3 mb-4">
+                <a
+                  href="tel:+77055535332"
+                  className="w-full flex items-center justify-center gap-2 bg-[#4ADE80] hover:bg-[#3dca72] text-gray-900 py-4 rounded-xl font-bold text-lg transition-colors shadow-md"
+                >
+                  <Phone size={20} />
+                  +7 705 553 53 32
+                </a>
+                <a
+                  href="tel:+77074791020"
+                  className="w-full flex items-center justify-center gap-2 bg-[#4ADE80] hover:bg-[#3dca72] text-gray-900 py-4 rounded-xl font-bold text-lg transition-colors shadow-md"
+                >
+                  <Phone size={20} />
+                  +7 707 479 10 20
+                </a>
+              </div>
               
               <a
                 href="https://wa.me/77055535332"

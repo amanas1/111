@@ -84,9 +84,9 @@ const Footer = () => {
                       <div className="text-sm font-bold text-gray-900 group-hover:text-[#DC2626] transition-colors">+7 (705) 553-53-32</div>
                     </div>
                   </a>
-                  <a href="tel:+77055535332" className="flex items-start gap-3 group ml-11">
+                  <a href="tel:+77074791020" className="flex items-start gap-3 group ml-11">
                     <div>
-                      <div className="text-sm font-bold text-gray-900 group-hover:text-[#DC2626] transition-colors">+7 (705) 553-53-32</div>
+                      <div className="text-sm font-bold text-gray-900 group-hover:text-[#DC2626] transition-colors">+7 (707) 479-10-20</div>
                     </div>
                   </a>
                   <div className="text-xs text-gray-500 ml-11 mt-1">Круглосуточно, без выходных</div>

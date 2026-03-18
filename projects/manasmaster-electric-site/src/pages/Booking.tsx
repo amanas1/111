@@ -214,16 +214,23 @@ const BookingPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+77055535332"
-                className="inline-flex items-center justify-center gap-2 bg-[#DC2626] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#B91C1C] transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-[#DC2626] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#B91C1C] transition-colors flex-1"
               >
                 <Phone size={18} />
                 +7 (705) 553-53-32
               </a>
               <a
+                href="tel:+77074791020"
+                className="inline-flex items-center justify-center gap-2 bg-[#DC2626] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#B91C1C] transition-colors flex-1"
+              >
+                <Phone size={18} />
+                +7 (707) 479-10-20
+              </a>
+              <a
                 href="https://wa.me/77055535332"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1da851] transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1da851] transition-colors flex-1"
               >
                 <MessageCircle size={18} />
                 WhatsApp

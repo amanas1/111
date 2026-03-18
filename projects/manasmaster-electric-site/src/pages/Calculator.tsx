@@ -156,12 +156,20 @@ const CalculatorPage = () => {
               <p className="text-sm opacity-70">Окончательная цена после осмотра мастером</p>
             </div>
 
-            <a
-              href="tel:+77055535332"
-              className="w-full mt-6 inline-flex items-center justify-center gap-2 bg-[#DC2626] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#B91C1C] transition-colors shadow-lg"
-            >
-              📞 Заказать услугу
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+              <a
+                href="tel:+77055535332"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-[#DC2626] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#B91C1C] transition-colors shadow-lg"
+              >
+                📞 +7 (705) 553-53-32
+              </a>
+              <a
+                href="tel:+77074791020"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-[#DC2626] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#B91C1C] transition-colors shadow-lg"
+              >
+                📞 +7 (707) 479-10-20
+              </a>
+            </div>
           </div>
 
           {/* Features */}

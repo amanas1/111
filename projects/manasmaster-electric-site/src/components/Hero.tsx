@@ -31,14 +31,23 @@ const Hero = () => {
             Профессиональные услуги электрика с гарантией до 12 месяцев. Работаем во всех районах Алматы 24/7.
           </p>
 
-          <a
-            href="tel:+77055535332"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-[#DC2626] to-[#E11D48] hover:from-[#B91C1C] hover:to-[#DC2626] text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 shadow-[0_8px_30px_rgba(220,38,38,0.4)] hover:shadow-[0_8px_30px_rgba(220,38,38,0.6)] animate-pulse btn-floating"
-            style={{ animationDuration: '3s' }}
-          >
-            <Phone size={22} className="fill-white" />
-            Вызвать мастера
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:+77055535332"
+              className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#DC2626] to-[#E11D48] hover:from-[#B91C1C] hover:to-[#DC2626] text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 shadow-[0_8px_30px_rgba(220,38,38,0.4)] hover:shadow-[0_8px_30px_rgba(220,38,38,0.6)] animate-pulse btn-floating flex-1"
+              style={{ animationDuration: '3s' }}
+            >
+              <Phone size={22} className="fill-white" />
+              +7 (705) 553-53-32
+            </a>
+            <a
+              href="tel:+77074791020"
+              className="inline-flex items-center justify-center gap-3 bg-white text-[#DC2626] border-2 border-[#DC2626] hover:bg-red-50 px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 shadow-lg flex-1"
+            >
+              <Phone size={22} />
+              +7 (707) 479-10-20
+            </a>
+          </div>
         </div>
 
         {/* Stats */}

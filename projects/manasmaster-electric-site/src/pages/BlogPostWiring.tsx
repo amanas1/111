@@ -67,9 +67,14 @@ const BlogPostWiring = () => {
 
             <div className="bg-red-50 border-t border-red-100 p-8 md:p-12 text-center">
               <h3 className="text-2xl font-bold text-red-700 mb-6 font-extrabold">Проверьте безопасность своей проводки сегодня!</h3>
-              <a href="tel:+77055535332" className="inline-flex items-center justify-center px-10 py-5 bg-[#DC2626] text-white font-bold rounded-2xl shadow-xl hover:bg-[#B91C1C] transition-all text-xl">
-                Вызвать Мастера
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+77055535332" className="inline-flex items-center justify-center px-8 py-4 bg-[#DC2626] text-white font-bold rounded-2xl shadow-xl hover:bg-[#B91C1C] transition-all text-lg flex-1">
+                  +7 (705) 553-53-32
+                </a>
+                <a href="tel:+77074791020" className="inline-flex items-center justify-center px-8 py-4 bg-[#DC2626] text-white font-bold rounded-2xl shadow-xl hover:bg-[#B91C1C] transition-all text-lg flex-1">
+                  +7 (707) 479-10-20
+                </a>
+              </div>
             </div>
           </article>
         </div>

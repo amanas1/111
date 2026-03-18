@@ -26,7 +26,7 @@ const Contacts = () => {
     <div className="min-h-screen bg-gray-50/50 flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
         title="Контакты | Вызов электрика в Алматы"
-        description="Свяжитесь с нами для вызова электрика на дом в Алматы. Телефон: +7 (705) 553-53-32. Работаем круглосуточно во всех районах города."
+        description="Свяжитесь с нами для вызова электрика на дом в Алматы. Телефоны: +7 (705) 553-53-32, +7 (707) 479-10-20. Работаем круглосуточно во всех районах города."
       />
       
       <div className="container mx-auto px-6 max-w-6xl">
@@ -42,17 +42,20 @@ const Contacts = () => {
         {/* 4 Top Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           
-          <a href="tel:+77055535332" className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
+          <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
             <Phone size={32} strokeWidth={1.5} className="text-[#DC2626] mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-[17px] font-bold text-gray-900 mb-3">Основной номер</h3>
-            <span className="text-xl font-extrabold text-[#DC2626] block mb-1">+77055535332</span>
-            <span className="text-[13px] text-gray-400 font-medium">Звоните в любое время</span>
-          </a>
+            <h3 className="text-[17px] font-bold text-gray-900 mb-3">Наши телефоны</h3>
+            <div className="flex flex-col gap-2">
+              <a href="tel:+77055535332" className="text-xl font-extrabold text-[#DC2626] hover:text-[#B91C1C] transition-colors">+77055535332</a>
+              <a href="tel:+77074791020" className="text-xl font-extrabold text-[#DC2626] hover:text-[#B91C1C] transition-colors">+77074791020</a>
+            </div>
+            <span className="text-[13px] text-gray-400 font-medium mt-3">Звоните в любое время</span>
+          </div>
 
-          <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
+          <a href="https://wa.me/77074791020" target="_blank" rel="noopener noreferrer" className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
             <MessageCircle size={32} strokeWidth={1.5} className="text-[#DC2626] mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-[17px] font-bold text-gray-900 mb-3">WhatsApp / Telegram</h3>
-            <span className="text-xl font-extrabold text-[#DC2626] block mb-1">+77055535332</span>
+            <span className="text-xl font-extrabold text-[#DC2626] block mb-1">+77074791020</span>
             <span className="text-[13px] text-gray-400 font-medium">Быстрые сообщения</span>
           </a>
 

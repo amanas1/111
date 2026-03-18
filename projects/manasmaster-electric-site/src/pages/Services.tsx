@@ -133,9 +133,15 @@ const Services = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
               <a 
                 href="tel:+77055535332"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-[#DC2626] bg-white hover:bg-gray-50 shadow-lg transition-all hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-[#DC2626] bg-white hover:bg-gray-50 shadow-lg transition-all hover:scale-105 flex-1"
               >
-                Позвонить сейчас
+                +7 (705) 553-53-32
+              </a>
+              <a 
+                href="tel:+77074791020"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-[#DC2626] bg-white hover:bg-gray-50 shadow-lg transition-all hover:scale-105 flex-1"
+              >
+                +7 (707) 479-10-20
               </a>
               <a 
                 href="https://wa.me/77055535332"

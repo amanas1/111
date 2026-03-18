@@ -19,6 +19,8 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Use the primary number for call, or let user choose if multiple buttons were there.
+    // Given the form context, we'll keep the primary for direct redirection or use a different logic.
     window.location.href = `tel:+77055535332`;
   };
 
@@ -39,7 +41,7 @@ const Index = () => {
           "name": "Мастер Манас — Электрик Алматы",
           "image": "https://manasmaster.kz/images/hero_electrician.png",
           "url": "https://manasmaster.kz",
-          "telephone": "+77055535332",
+          "telephone": ["+77055535332", "+77074791020"],
           "priceRange": "₸₸",
           "address": {
             "@type": "PostalAddress",
@@ -324,7 +326,10 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="text-[13px] text-slate-400 font-medium mb-1">Звоните круглосуточно</div>
-                    <a href="tel:+77055535332" className="text-xl font-extrabold block hover:text-[#FB7185] transition-colors">+7 705 553 53 32</a>
+                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
+                      <a href="tel:+77055535332" className="text-xl font-extrabold block hover:text-[#FB7185] transition-colors">+7 705 553 53 32</a>
+                      <a href="tel:+77074791020" className="text-xl font-extrabold block hover:text-[#FB7185] transition-colors">+7 707 479 10 20</a>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">

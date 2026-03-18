@@ -187,13 +187,22 @@ const Prices = () => {
                 <p className="mb-8 opacity-90 max-w-2xl mx-auto text-lg leading-relaxed">
                   Мы выполняем любые виды электромонтажных работ. Позвоните нам прямо сейчас, опишите вашу проблему, и мастер назовет ориентировочную стоимость.
                 </p>
-                <a 
-                  href="tel:+77055535332"
-                  className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-2xl text-[#DC2626] bg-white hover:bg-gray-50 shadow-xl transition-all hover:-translate-y-1 gap-3 hover:shadow-2xl"
-                >
-                  <Phone size={24} />
-                  Узнать точную цену
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="tel:+77055535332"
+                    className="inline-flex items-center justify-center px-8 py-5 text-lg font-bold rounded-2xl text-[#DC2626] bg-white hover:bg-gray-50 shadow-xl transition-all hover:-translate-y-1 gap-3 hover:shadow-2xl flex-1"
+                  >
+                    <Phone size={24} />
+                    +7 (705) 553-53-32
+                  </a>
+                  <a 
+                    href="tel:+77074791020"
+                    className="inline-flex items-center justify-center px-8 py-5 text-lg font-bold rounded-2xl text-[#DC2626] bg-white hover:bg-gray-50 shadow-xl transition-all hover:-translate-y-1 gap-3 hover:shadow-2xl flex-1"
+                  >
+                    <Phone size={24} />
+                    +7 (707) 479-10-20
+                  </a>
+                </div>
               </div>
             </div>
 
